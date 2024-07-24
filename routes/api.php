@@ -2,12 +2,12 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Illuminate\H
+use App\Http\Controllers\API\UserController;  // Correct namespace
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
 
-Route::post('login', [API\UserController::class, 'login']);
-Route::post('register', [API\UserController::class, 'register']);
-Route::post('logout', [API\UserController::class, 'logout']);
+Route::post('login', [UserController::class, 'login']);
+Route::post('register', [UserController::class, 'register']);
+Route::post('logout', [UserController::class, 'logout'])->middleware('auth:sanctum');
