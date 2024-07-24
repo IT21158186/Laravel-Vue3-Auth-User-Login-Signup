@@ -1,19 +1,12 @@
 <template>
-    <div>
-      <!-- Navigation Bar -->
-      <nav class="navbar">
-        <ul class="nav-links">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Content -->
-      <div class="content">
-        <h1>Welcome, this page will show to all users</h1>
-      </div>
+    <div class="row">
+      Welcome, this page will show to all users
+    </div>
+    <div class="content">
+      <div class="box" id="box1">Box 1</div>
+      <div class="box" id="box2">Box 2</div>
+      <div class="box" id="box3">Box 3</div>
+      <div class="box" id="box4">Box 4</div>
     </div>
   </template>
 
@@ -21,50 +14,56 @@
   export default {
     name: "Home",
     data() {
-      return {};
+      return {
+        //
+      }
     },
-    created() {},
-    methods: {},
-  };
+    created() {
+      //
+    },
+    methods: {}
+  }
   </script>
 
   <style scoped>
-  /* Navigation Bar Styles */
-  .navbar {
-    background-color: #4a90e2; /* Light blue background */
-    padding: 10px 20px; /* Add some padding */
-    display: flex;
-    justify-content: center; /* Center the nav items */
-  }
-
-  .nav-links {
-    list-style: none; /* Remove default list styling */
-    display: flex;
-    gap: 20px; /* Add space between links */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-  }
-
-  .nav-link {
-    text-decoration: none; /* Remove underline */
-    color: white; /* White text color */
-    font-weight: bold; /* Bold text */
-    transition: color 0.3s ease; /* Smooth color transition */
-  }
-
-  .nav-link:hover {
-    color: #ffcc00; /* Change text color on hover */
-  }
-
-  /* Content Styles */
-  .content {
-    padding: 20px;
+  .row {
+    font-size: 24px;
     text-align: center;
-    font-family: Arial, sans-serif;
+    margin: 20px 0;
   }
 
-  .content h1 {
-    color: #333; /* Dark gray text color */
-    font-size: 24px; /* Increase font size */
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+
+  #box1 {
+    background-color: #FF5733; /* Red */
+  }
+
+  #box2 {
+    background-color: #33FF57; /* Green */
+  }
+
+  #box3 {
+    background-color: #3357FF; /* Blue */
+  }
+
+  #box4 {
+    background-color: #FF33A1; /* Pink */
   }
   </style>
+
